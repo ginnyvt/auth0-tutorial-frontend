@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const Profile = () => {
   const { user } = useAuth0();
   console.log(user);
+  console.log(localStorage.getItem('token'));
   const { name, picture, email } = user;
   return (
     <div>

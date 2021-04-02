@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Profile from './components/Profile/Profile';
 import ProtectedRoute from './auth-config/protected-route';
+import FetchEvents from './components/Events/FetchEvents';
 
 const App = () => {
   const { isLoading } = useAuth0();
@@ -24,6 +25,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <ProtectedRoute path='/profile' component={Profile} />
+          <ProtectedRoute path='/events' component={FetchEvents} />
         </Switch>
       </div>
     </div>
